@@ -1,0 +1,142 @@
+*{
+    font-family: 'DM Sans', sans-serif; 
+    box-sizing: border-box;
+    margin: 0;
+    outline: none;
+}
+h1{
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+#container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#nav button{
+    padding: 10px;
+    border-radius: 10px;
+    border:none;
+    background: none;
+    color:#87898a;
+    font-size: 13px;
+    font-weight: 600;
+}
+#nav button.active{
+    background: black;
+    color: white;
+}
+#kredit,#depozit,#AvtoKredit,#Ipoteka {
+    display: flex;       
+    gap: 2rem;
+    border-radius: 24px;
+    padding: 2.5rem;
+}
+#date,#depoText{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    flex-wrap: wrap;
+}
+.text1{
+    text-align: left;
+    p{
+        color:#c0d4fa;
+        font-size: 15px;
+    }
+    h4{font-size: 25px;}
+}
+p{color:#8b7d82;}
+#miniBtn{
+    padding: 7px;
+    background: #f5f5f6;
+    border-radius: 10px;
+}
+#miniBtn button{
+    background: none;
+    padding: 8px 13px ; 
+    border: none;
+}
+#miniBtn button.deepActive{
+    background: #ffffff;
+    border: 1px solid #87898a;
+    border-radius: 7px;
+}
+#durations button.deepActive{
+    background: #ffffff;
+    border: 1px solid #2c2d2d;
+    border-radius: 7px;
+    border-radius: 100px;
+}
+#depozit,#AvtoKredit,#Ipoteka{display: none;}
+
+#durations button{
+    background: #f5f5f6;
+    width: 40px;
+    height: 40px; 
+    /* padding: 10px; */
+    text-align: center;
+    border: none;
+    border-radius: 100px;
+}
+#left {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    gap: 1.5rem;
+}
+span{color:#8b7d82;}
+.topText, .underText {
+    display: flex;
+    justify-content: space-between; 
+}
+input[type="range"] {   
+    appearance: none;   
+    width: 500px;
+    height: 25px;
+    border-radius: 10px;
+    background: #e5e7eb;     
+    margin: 15px 0;
+}
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none; 
+    width: 20px;
+    height: 24px;
+    border-radius: 30%;
+    background: #2563eb;
+    cursor: pointer;
+}
+#right {
+    background: #2563eb;   
+    color: white;
+    width: 420px;
+    /* height: 240px; */
+    margin: auto 30px;
+    border-radius: 20px;
+    padding: 30px  ;  
+    text-align: center;
+}
+#right *{margin:10px;}
+#right button {
+    background: white;
+    color: black;
+    border: none;
+    border-radius: 12px;
+    padding: 20px 110px;
+    cursor: pointer;
+    font-weight: 700;
+}
+h5{font-size: 22px;}
+h3{font-size: 50px;}
+
+@media only screen and (max-width: 768px) {
+    #depozit,#AvtoKredit,#Ipoteka{display: none;}
+    #kredit,#depozit,#AvtoKredit,#Ipoteka {
+        display: flex;
+        flex-direction: column;
+        gap:60px
+    }
+}
