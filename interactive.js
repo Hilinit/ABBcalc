@@ -1,33 +1,9 @@
 /*=============================Button-larda active yerdeyismesi=================*/
-
 const navButtons=document.querySelectorAll('#nav button');
-const dateButtons=document.querySelectorAll('#date button');
+const dateButtons=document.querySelectorAll('.miniBtns.btn1 button');
+const currencyButtons=document.querySelectorAll('.miniBtns.btn2 button');
 const durationsButtons=document.querySelectorAll('#durations button');
 
-// for (let i=0; i<navButtons.length; i++) {
-//   navButtons[i].addEventListener('click', function () {
-//     for (let j=0; j<navButtons.length; j++) {
-//       navButtons[j].classList.remove('active');
-//     }
-//     this.classList.add('active');
-//   });
-// }
-// for (let i=0; i<dateButtons.length; i++) {
-//   dateButtons[i].addEventListener('click', function () {
-//     for (let j=0; j<dateButtons.length; j++) {
-//       dateButtons[j].classList.remove('deepActive');
-//     }
-//     this.classList.add('deepActive');
-//   });
-// }
-// for (let i=0; i<durationsButtons.length; i++) {
-//     durationsButtons[i].addEventListener('click', function () {
-//       for (let j=0; j<dateButtons.length; j++) {
-//         durationsButtons[j].classList.remove('deepActive');
-//       }
-//       this.classList.add('deepActive');
-//     });
-// }
 
 function Actived(buttons, clas) {
     for (let i=0; i<buttons.length; i++) {
@@ -39,12 +15,12 @@ function Actived(buttons, clas) {
       });
     }
 }
-  
 Actived(navButtons,'active')
-Actived(dateButtons,'deepActive')
+Actived(dateButtons, 'rightActive');
+Actived(currencyButtons, 'leftActive');
 Actived(durationsButtons,'deepActive')
 
-  /*=================================Display================================ */
+/*=================================Display================================ */
 
   const kredit=document.getElementById("kredit")
   const depozit=document.getElementById("depozit")
@@ -62,3 +38,38 @@ Actived(durationsButtons,'deepActive')
       if(clicked=='AvtoKredit') avtoKredit.style.display='flex';
       if(clicked=='Ipoteka') ipoteka.style.display='flex';
 } 
+
+let kreditResult=document.getElementById("kreditresult");
+const range1 = document.querySelector('.range1'); 
+const range2 = document.querySelector('.range2'); 
+const range3 = document.querySelector('.range3'); 
+
+class Credit {
+  constructor(menbleg, muddet, derece) {
+    this.amount = menbleg;
+    this.duration = muddet;
+    this.interestRate = derece;
+  }
+}
+
+let credit = new Credit(range1.value, range2.value, range3.value);
+
+function updateCreditResult() {
+  kreditResult.textContent = `${((credit.amount * credit.duration * credit.interestRate)/1000).toFixed(2)} ₼`;
+}
+
+range1.addEventListener('input', function() {
+  credit.amount = Number(this.value);
+  updateCreditResult();
+});
+
+range2.addEventListener('input', function() {
+  credit.duration = Number(this.value);
+  updateCreditResult();
+});
+
+range3.addEventListener('input', function() {
+  credit.interestRate = Number(this.value);
+  updateCreditResult();
+});
+

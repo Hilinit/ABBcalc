@@ -50,17 +50,17 @@ h1{
     h4{font-size: 25px;}
 }
 p{color:#8b7d82;}
-#miniBtn{
+.miniBtns{
     padding: 7px;
     background: #f5f5f6;
     border-radius: 10px;
 }
-#miniBtn button{
+.miniBtns button{
     background: none;
     padding: 8px 13px ; 
     border: none;
 }
-#miniBtn button.deepActive{
+.btn1 button.rightActive,.btn2 button.leftActive{
     background: #ffffff;
     border: 1px solid #87898a;
     border-radius: 7px;
@@ -94,7 +94,7 @@ span{color:#8b7d82;}
     justify-content: space-between; 
 }
 input[type="range"] {   
-    appearance: none;   
+    /* appearance: none;    */
     width: 500px;
     height: 25px;
     border-radius: 10px;
@@ -102,7 +102,7 @@ input[type="range"] {
     margin: 15px 0;
 }
 input[type="range"]::-webkit-slider-thumb {
-    appearance: none; 
+    /* appearance: none;  */
     width: 20px;
     height: 24px;
     border-radius: 30%;
@@ -133,10 +133,5 @@ h5{font-size: 22px;}
 h3{font-size: 50px;}
 
 @media only screen and (max-width: 768px) {
-    #depozit,#AvtoKredit,#Ipoteka{display: none;}
-    #kredit,#depozit,#AvtoKredit,#Ipoteka {
-        display: flex;
-        flex-direction: column;
-        gap:60px
-    }
+    #container{display: block;}
 }
