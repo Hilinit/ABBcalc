@@ -16,24 +16,24 @@
                 <button onclick="vizible('AvtoKredit')" >Avtomobil Krediti</button>
                 <button onclick="vizible('Ipoteka')" >Ipoteka</button>
             </div>
-<!-- =============================================DEPOZIT=========================================================== -->
+<!-- =================================================================================================== -->
             <div id="kredit">
                 <div id="left">
                     <div id="ran1">
                         <div class="topText">
                             <span>Məbləğ</span>
-                            <span>50000₼</span>
+                            <span style="color:black" class="money">50000₼</span>
                         </div>
                         <input class="range1" type="range" min="300" max="50001" value="300">
                         <div class="underText">
                             <span>300 ₼</span>
-                            <span>50000₼</span>
+                            <span >50000₼</span>
                         </div>
                     </div>
                     <div id="ran2">
                         <div class="topText">
                             <span>Müddət</span>
-                            <span>12ay</span>
+                            <span style="color:black" class="date">12ay</span>
                         </div>
                         <input class="range2" type="range" step="3" min="3" max="60" value="3">
                         <div class="underText">
@@ -44,11 +44,11 @@
                     <div id="ran3">
                         <div class="topText">
                             <span>Faiz dərəcəsi</span>
-                            <span>12%</span>
+                            <span style="color:black" class="rate">12%</span>
                         </div>
                         <input class="range3" type="range" min="10.9" max="38" value="10.9">
                         <div class="underText">
-                            <span>10.9 %</span>
+                            <span >10.9 %</span>
                             <span>37.7 %</span>
                         </div>
                     </div>
@@ -59,54 +59,54 @@
                     <button>Davam et</button>
                 </div>
             </div>
-        
-<!-- =============================================DEPOZIT=========================================================== -->
+<!-- ======================================DEPOZIT======================================================= -->
             <div id="depozit">
                 <div id="left">
                     <div id="date">
                         <div class="miniBtns btn1">
-                            <button class="rightActive">Hər ay</button>
-                            <button>Hər il</button>
+                            <button value='0.02' class="rightActive topBtn">Hər ay</button>
+                            <button value='0.03' class="topBtn">Hər il</button>
                         </div>
                         <div class="miniBtns btn2">
-                            <button class="leftActive">AZN</button>
-                            <button>USD</button>
+                            <button value='₼' class="leftActive topBtn">AZN</button>
+                            <button value='$' class="topBtn">USD</button>
                         </div>
                     </div>
                     <div id="ran1">
                         <div class="topText">
                             <span>Məbləğ</span>
-                            <span>10000₼</span>
+                            <span style="color:black" class="money1">10000₼</span>
                         </div>
-                        <input class="range1" type="range" min="300" max="50001" value="300">
+                        <input class="range4" type="range" min="300" max="50000" value="300">
                         <div class="underText">
-                            <span>300 ₼</span>
+                            <span >300 ₼</span>
                             <span>3000000₼</span>
-                        </div>
+                        </div> 
                     </div>
                     <p>İllik faiz dərəcəsi</p>
                     <div id="durations">
-                        <button class="deepActive month" >3 </button>
-                        <button class="month">6</button>
-                        <button onclick="change(12)">12</button>
-                        <button onclick="change(18)">18</button>
-                        <button onclick="change(24)">24</button>
-                        <button onclick="change(36)">36</button> 
+                        <button value="1" style="display: none;" class="rateBtn">6</button>
+                        <button value="3" class="deepActive rateBtn" >3</button>
+                        <button value="6" class="rateBtn">6</button>
+                        <button value="12" class="rateBtn">12</button>
+                        <button value="18" class="rateBtn">18</button>
+                        <button value="24" class="rateBtn">24</button>
+                        <button value="36" class="rateBtn">36</button> 
                     </div>
                 </div>
 
                 <div id="right">
                     <h5>Ümumi qazanc</h5>
-                    <h3 class="kreditResult">200.00 ₼</h3>
+                    <h3 class="depozitResult">200.00 ₼</h3>
                     <hr style="color:beige;" />
                     <div id="depoText">
                         <div class="text1">
                             <p>Hər ay ödənilən faiz</p>
-                            <h4>66.67 ₼</h4>
+                            <h4 class="moneytwo">66.67 ₼</h4>
                         </div>
                         <div class="text1">
                             <p>Faiz dərəcəsi</p>
-                            <h4>8 %</h4>
+                            <h4 class="rate1">8 %</h4>
                         </div>
                     </div>
                 </div>
@@ -116,17 +116,17 @@
                 <div id="left">
                     <div id="date">
                         <div class="miniBtns btn1">
-                            <button class="rightActive">Elektrik</button>
-                            <button>Hibrit</button>
-                            <button>Digər</button>
+                            <button value='0.02' class="rightActive topBtn">Elektrik</button>
+                            <button value='0.03' class="topBtn">Hibrit</button>
+                            <button value='0.04' class="topBtn">Digər</button>
                         </div>
                     </div>
                     <div id="ran1">
                         <div class="topText">
-                            <span>Məbləğ</span>
-                            <span>50000₼</span>
+                            <span>Avtomobilin qiyməti</span>
+                            <span style="color:black" class="money2">50000₼</span>
                         </div>
-                        <input class="range1" type="range" min="300" max="50001" value="300">
+                        <input class="range5" type="range" min="300" max="50000" value="300">
                         <div class="underText">
                             <span>300 ₼</span>
                             <span>50000₼</span>
@@ -134,10 +134,10 @@
                     </div>
                     <div id="ran2">
                         <div class="topText">
-                            <span>Müddət</span>
-                            <span>12ay</span>
+                            <span>Kredit müddəti</span>
+                            <span style="color:black" class="date2">12ay</span>
                         </div>
-                        <input class="range2" type="range" step="3" min="3" max="60" value="3">
+                        <input class="range6" type="range" step="3" min="3" max="60" value="3">
                         <div class="underText">
                             <span>3 ay</span>
                             <span>59 ay</span>
@@ -145,10 +145,10 @@
                     </div>
                     <div id="ran3">
                         <div class="topText">
-                            <span>Faiz dərəcəsi</span>
-                            <span>12%</span>
+                            <span>İlkin ödəniş faizi</span>
+                            <span style="color:black" class="rate2">12%</span>
                         </div>
-                        <input class="range3" type="range" min="10.9" max="38" value="10.9">
+                        <input class="range7" type="range" min="10.9" max="37.9" value="10.9">
                         <div class="underText">
                             <span>10.9 %</span>
                             <span>37.7 %</span>
@@ -157,24 +157,24 @@
                 </div>
                 <div id="right">
                     <h5>Aylıq kredit ödənişi</h5>
-                    <h3>1398.59 ₼</h3>
+                    <h3 class="avtoResult">1398.59 ₼</h3>
                     <hr style="color:beige;" />
                     <div id="depoText">
                         <div class="text1">
                             <p>Kredit məbləği</p>
-                            <h4>40000 ₼</h4>
+                            <h4 class="av1">40000 ₼</h4>
                         </div>
                         <div class="text1">
                             <p>İllik faiz dərəcəsi</p>
-                            <h4>14 %</h4>
+                            <h4 class="av2">14 %</h4>
                         </div>
                         <div class="text1">
                             <p>Komissiya</p>
-                            <h4>2000 ₼</h4>
+                            <h4 class="av3">2000 ₼</h4>
                         </div>
                         <div class="text1">
                             <p>Ümumi ödəniş</p>
-                            <h4 class="kreditResult">48950.65 ₼</h4>
+                            <h4 class="av4">48950.65 ₼</h4>
                         </div>
                     </div>
                     <button>Davam et</button>
@@ -187,9 +187,9 @@
                     <div id="ran1">
                         <div class="topText">
                             <span>Məbləğ</span>
-                            <span>10000₼</span>
+                            <span style="color:black" class="money3">10000₼</span>
                         </div>
-                        <input class="range1" type="range" min="300" max="50001" value="300">
+                        <input class="range8" type="range" min="1" max="500000" value="1">
                         <div class="underText">
                             <span>1 ₼</span>
                             <span>500000 ₼</span>
@@ -198,9 +198,9 @@
                     <div id="ran1">
                         <div class="topText">
                             <span>Müddət</span>
-                            <span>12 il</span>
+                            <span style="color:black" class="date3">12 il</span>
                         </div>
-                        <input class="range2" type="range" min="300" max="50001" value="300">
+                        <input class="range9" type="range" min="1" max="25" value="1">
                         <div class="underText">
                             <span>1 il</span>
                             <span>25 il</span>
@@ -208,27 +208,27 @@
                     </div>
                     <p>İllik faiz dərəcəsi</p>
                     <div id="durations">
-                        <button class="deepActive" onclick="change()">4%</button>
-                        <button onclick="change()">7%</button>
-                        <button onclick="change()">8%</button>
-                        <button onclick="change()">11%</button>
-                        <button onclick="change()">12%</button>
-                        <button onclick="change()">13%</button> 
+                        <button value="4" class="deepActive rateBtn" >4%</button>
+                        <button value="7" class="rateBtn">7%</button>
+                        <button value="8" class="rateBtn">8%</button>
+                        <button value="11" class="rateBtn">11%</button>
+                        <button value="12" class="rateBtn">12%</button>
+                        <button value="13" class="rateBtn">13%</button> 
                     </div>
-                </div>
+                </div> 
 
                 <div id="right">
                     <h5>Aylıq kredit ödənişi</h5>
-                    <h3>875.53 ₼</h3>
+                    <h3 class="ipotekResult">875.53 ₼</h3>
                     <hr style="color:beige;" />
                     <div id="depoText">
                         <div class="text1">
                             <p>Kredit məbləği</p>
-                            <h4 class="kreditResult">100000 ₼</h4>
+                            <h4 class="ipo1">100000 ₼</h4>
                         </div>
                         <div class="text1">
                             <p>İllik faiz dərəcəsi</p>
-                            <h4>4 %</h4>
+                            <h4 class="ipo2">12 %</h4>
                         </div>
                     </div>
                     <button>Davam et</button>
