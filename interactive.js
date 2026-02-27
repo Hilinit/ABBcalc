@@ -112,6 +112,8 @@ function updateDepozit() {
   for (let element of rightcurr) {
     element.addEventListener("click", function () {
       money1.innerHTML = `${range4.value}${element.value}`
+      depozitResult.innerHTML = `${(depo.amount * 12)} ${element.value}`
+
     });
   }
 }
