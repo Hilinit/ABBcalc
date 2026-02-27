@@ -2,7 +2,7 @@
 const navButtons = document.querySelectorAll('#nav button');
 const dateButtons = document.querySelectorAll('.miniBtns.btn1 button');
 const currencyButtons = document.querySelectorAll('.miniBtns.btn2 button');
-const durationsButtons = document.querySelectorAll('#durations button');
+const durationsButtons = document.querySelectorAll('.durations button');  /* id="durations" → class="durations" */
 
 function Actived(buttons, clas) {
   for (let i = 0; i < buttons.length; i++) {
@@ -37,6 +37,7 @@ function vizible(clicked) {
   if (clicked == 'AvtoKredit') avtoKredit.style.display = 'flex';
   if (clicked == 'Ipoteka') ipoteka.style.display = 'flex';
 }
+
 /*==================================================Credit==================================*/
 const kreditResult = document.querySelector(".kreditResult");
 const range1 = document.querySelector('.range1');
@@ -113,7 +114,6 @@ function updateDepozit() {
     element.addEventListener("click", function () {
       money1.innerHTML = `${range4.value}${element.value}`
       depozitResult.innerHTML = `${(depo.amount * 12)} ${element.value}`
-
     });
   }
 }
@@ -178,6 +178,7 @@ range7.addEventListener('input', function () {
   AvtoCredit.interestRate = Number(this.value)
   updateAvtoCredit();
 });
+
 /*=====================================================Ipoteka========================*/
 
 const ipotekResult = document.querySelector(".ipotekResult");
@@ -189,7 +190,7 @@ const date3 = document.querySelector('.date3');
 const ipo1 = document.querySelector('.ipo1');
 const ipo2 = document.querySelector('.ipo2');
 
-const Ratebuttons = document.querySelectorAll(".rateBtn");
+const Ratebuttons = document.querySelectorAll(".rateBtn");  /* id seçici yox idi, dəyişiklik lazım deyil */
 
 class Ipotek {
   constructor(mebleg, muddet) {
