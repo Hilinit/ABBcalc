@@ -2,7 +2,7 @@
 const navButtons = document.querySelectorAll('#nav button');
 const dateButtons = document.querySelectorAll('.miniBtns.btn1 button');
 const currencyButtons = document.querySelectorAll('.miniBtns.btn2 button');
-const durationsButtons = document.querySelectorAll('.durations button');  /* id="durations" → class="durations" */
+const durationsButtons = document.querySelectorAll('.durations button');  
 
 function Actived(buttons, clas) {
   for (let i = 0; i < buttons.length; i++) {
